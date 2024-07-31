@@ -4,7 +4,6 @@ from src.creat_bd import WorkWithJson
 
 
 def main():
-    file_name = input("Введите имя фала:\n") + ".json"
     user_vacancy = input('Введите вакансию для поиска на сайте hh.ru: \n')
     hh = HH(user_vacancy)
     if hh.connect != 200:
@@ -12,11 +11,11 @@ def main():
     else:
         hh.load_vacancies()
         vacancies = hh.vacancies
-        fv = WorkWithJson(file_name)
+        fv = WorkWithJson()
         fv.save_file(vacancies)
         name_criterion = input('Введите критерий для отбора вакансий: \n')
         n = input('Введите количество вакансий для просмотра: \n')
-        vac = creat_class(file_name)
+        vac = creat_class()
         top_vacancies = sorting(vac, name_criterion, int(n))
         for top_vacancy in top_vacancies:
             print(top_vacancy)
