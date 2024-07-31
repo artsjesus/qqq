@@ -1,7 +1,5 @@
 class JobVacancy:
     def __init__(self, name: str, salary: dict, url: str, requirement: str):
-        if not isinstance(salary, dict):
-            raise TypeError("Salary must be a dictionary")
         self.name = name
         self.url = url
         self.requirement = requirement

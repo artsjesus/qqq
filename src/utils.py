@@ -18,7 +18,7 @@ def creat_class():
     return list_vacancies
 
 
-def sorting(vacancies, criterion, n: int):
+def sorting(vacancies, criterion: str, n: int):
     """Сортировка N вакансий и поиск по ключевым словам"""
     criterion_vacancies = []
     for vac in vacancies:
